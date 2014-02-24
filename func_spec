@@ -14,8 +14,6 @@ User picks 2 parent plants of unknown genotypes out of a somewhat large selectio
 Depending on the genotypes assigned by the computer to the 2 selected plants, the 20 offspring will be different colors.
 User must determine the genotypes of the 2 original selected plants. [clicks on 2 possible squares with genotypes on them]
 
-Design Specification
-4 buttons each with of the title of one of the games on it
 Determining Phenotypes:
 Picture of a green plant with an “R” next to it; picture of the same plant but yellow with an “r” next to it.
 Computer randomly generates “RR,” “Rr,” or “rr.”
