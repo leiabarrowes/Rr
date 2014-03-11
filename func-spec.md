@@ -3,7 +3,7 @@
 
 ##Introduction:##
 
-This game will help students learn the difference between dominant and recessive alleles and how different combinations are expressed in the phenotype.
+>This game will help students learn the difference between dominant and recessive alleles and how different combinations are expressed in the phenotype.
 
 
 ##Home Page:##
