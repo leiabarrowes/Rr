@@ -19,7 +19,7 @@ User chooses from "Determining Phenotypes", and "Predicting Genotypes", and "Det
 
 User is told which allele is dominant and which is recessive: Picture of a green plant with an "R" next to it; picture of the same plant but yellow with an "r" next to it.
 
-Computer randomly generates â€œRR,â€ â€œRr,â€ or â€œrr.â€
+Computer randomly generates "RR", "Rr", or "rr".
 Two plants in middle of screen (green and yellow).  User must click the one with the correct color according to the given genotype.
 Computer keeps track of number Correct and number Incorrect.
 "Back" link sends user back to home page.
