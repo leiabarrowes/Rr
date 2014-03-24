@@ -3,7 +3,9 @@
 
 ##Introduction:##
 
-This game will help students learn the difference between dominant and recessive alleles and how different combinations are expressed in the phenotype.
+This web-based app game will help students learn the difference between dominant and recessive alleles and how different combinations are expressed in the phenotype.
+
+This game is intended for practice only. Students will not be able to log in and track their individual progress.  Results will not be reported to the teacher.
 
 
 ##Home Page:##
