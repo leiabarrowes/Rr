@@ -1,0 +1,59 @@
+@CHARSET "ISO-8859-1";
+
+*{
+	font-family:cursive
+}
+
+a:hover{
+	color:green
+}
+
+.hide{
+	color:white
+}
+
+.PSq{
+	border:solid black 2px
+}
+=====
+#link1 {
+    text-align: center;
+}
+
+a {}
+
+#d1 {
+    opacity:0;
+ }
+
+#link1:hover > #d1 {
+    opacity:1;
+}
+=====
+#link2 {
+    text-align: center;
+}
+
+a {}
+
+#d2 {
+    opacity:0;
+ }
+
+#link2:hover > #d2 {
+    opacity:1;
+}
+=====
+#link3 {
+    text-align: center;
+}
+
+a {}
+
+#d3 {
+    opacity:0;
+ }
+
+#link3:hover > #d3 {
+    opacity:1;
+}

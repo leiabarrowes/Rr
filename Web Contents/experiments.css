@@ -1,0 +1,14 @@
+@CHARSET "ISO-8859-1";
+#link2 {
+    text-align: center;
+}
+
+a {}
+
+#d2 {
+    opacity:0;
+ }
+
+#link2:hover > #d2 {
+    opacity:1;
+}
