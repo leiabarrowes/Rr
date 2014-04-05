@@ -28,12 +28,28 @@ The following do not apply to the Genetics Games and will not be discussed in th
 HTML, CSS, and JavaScript
 
 ##Client System Architechture
+JavaScript will be used to process the user's inputs and progress each game.
+
+HMTL and CSS will be used to create the layout of each game.  
+
+Pressing a specific HTML button on the web page will trigger a specific JavaScript function in response, which will make the game progress.  See Mathematical Model for details on the functions and gameplay.
+
+##Major Entry Points
 
 
-##Major Entry Points (URL's) to the Site
+##Mathematical Model 
+###Determining Phenotypes
+Pressing the "CLICK ME" button will initialize the game, triggering the function DPrand(), which will make a random genotype (RR, Rr, or rr) appear on the screen by generating a random number over the interval [0,1).  
+If the number is [0,1/3) then the result will be RR.  
+If the number is [1/3,2/3) then the result will be Rr.  
+If the number is [2/3,1) then the result will be rr.
+See the Functional Spec to see how 
+
+###Predicting Genotypes
 
 
-##Mathematical Model for Gameplay
+###Determining Genotypes
+
 
 
 ##Software Test Strategy
