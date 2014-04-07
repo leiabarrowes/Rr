@@ -9,21 +9,21 @@ The Genetics Games are run entirely in the browser, with no server or database s
 
 This Design Spec will cover the following aspects of the Games:
 
-*Client side programming language
-*Data storage requirements and tool choices
-*Client system architechture
-*Major entry points (URL's) to the site
-*Mathematical model for gameplay
-*Software test strategy
-*Software deployment instructions
+-Client side programming language
+-Data storage requirements and tool choices
+-Client system architechture
+-Major entry points (URL's) to the site
+-Mathematical model for gameplay
+-Software test strategy
+-Software deployment instructions
 
 The following do not apply to the Genetics Games and will not be discussed in the Design Spec:
 
-*Server software and overall architecture
-*Server side programming language
-*Data storage requirements and tool choices
-*Server system architecture
-*Bug Tracking Strategy
+-Server software and overall architecture
+-Server side programming language
+-Data storage requirements and tool choices
+-Server system architecture
+-Bug Tracking Strategy
 
 
 ##Client Side Programming Language
