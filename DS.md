@@ -8,6 +8,7 @@ This Design Specification will describe how the Genetics Games work from the ins
 The Genetics Games are run entirely in the browser, with no server or database support.
 
 This Design Spec will cover the following aspects of the Games:
+
 *Client side programming language
 *Data storage requirements and tool choices
 *Client system architechture
@@ -17,6 +18,7 @@ This Design Spec will cover the following aspects of the Games:
 *Software deployment instructions
 
 The following do not apply to the Genetics Games and will not be discussed in the Design Spec:
+
 *Server software and overall architecture
 *Server side programming language
 *Data storage requirements and tool choices
