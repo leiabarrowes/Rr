@@ -38,10 +38,6 @@ Computer keeps track of number Correct and number Incorrect.
 
 ##Determining Genotypes (Challenge):##
 
-
-20 random plants, each with a random genotype (unknown to user) and corresponding color, are scattered around the screen.
-User clicks on 2 of these plants, selecting them to be the parents.
-20 offspring are shown on the screen, the genotypes & colors of which are determined by the genotypes of the parents.
 User selects the genotypes of the parents after seeing the colors of the offspring.
 Computer keeps track of number Correct and number Incorrect.
 "Back" link sends user back to home page.
