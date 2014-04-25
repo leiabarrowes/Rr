@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<script type='text/javascript' src='Rr.js'></script>
+<link type='text/css' rel='stylesheet' href='Rr.css'/>
+<link rel="shortcut icon" href="file:///C:/Users/Leia/Downloads/Rr-icon.PNG">
+<title>Punnett Squares</title>
+</head>
+<body>
+	<h1 align='center'>Punnett Squares</h1>
+	
+	<div align='center' id='init'><button onclick='DPrand1(), DPrand2()'>CLICK ME</button></div>
+	
+	<table align='center'>
+		<tr><td></td>
+			<td align='center' id='1a' style='font-size:100px'>.</td>
+			<td align='center' id='1b' style='font-size:100px'>.</td>
+		</tr>
+		<tr>
+			<td id='2a' style='font-size:100px'>.</td>
+			<td style='border-width:2px; border-style:solid'>
+				<table><tr>
+					<td><button onclick='Choose("q2","RR")'>RR</button></td>
+					<td><button onclick='Choose("q2","Rr")'>Rr</button></td>
+					<td><button onclick='Choose("q2","rr")'>rr</button></td>
+				</tr><tr><div style='font-size:50px' id="q2" align='center'>--</div></tr></table></td>
+			<td style='border-width:2px; border-style:solid'>
+				<table><tr>
+					<td><button onclick='Choose("q1","RR")'>RR</button></td>
+					<td><button onclick='Choose("q1","Rr")'>Rr</button></td>
+					<td><button onclick='Choose("q1","rr")'>rr</button></td>
+				</tr><tr><div style='font-size:50px' id= "q1" align='center'>--</div></tr></table>
+			</td>
+		</tr>
+		<tr><td id='2b' style='font-size:100px'>.</td>
+		<td style='border-width:2px; border-style:solid'>
+			<table><tr>
+				<td><button onclick='Choose("q3","RR")'>RR</button></td>
+				<td><button onclick='Choose("q3","Rr")'>Rr</button></td>
+				<td><button onclick='Choose("q3","rr")'>rr</button></td>
+			</tr><tr><div style='font-size:50px' id="q3" align='center'>--</div></tr></table></td>
+		<td style='border-width:2px; border-style:solid'>
+			<table><tr>
+				<td><button onclick='Choose("q4","RR")'>RR</button></td>
+				<td><button onclick='Choose("q4","Rr")'>Rr</button></td>
+				<td><button onclick='Choose("q4","rr")'>rr</button></td>
+			</tr><tr><div style='font-size:50px' id="q4" align='center'>--</div></tr></table></td>
+		</tr>
+	</table>
+	
+	<p class='hide'>...</p>
+	<table align='center'><tr>
+	<td><div align='center'><button onclick='ResetDG()'>RESET</button></div></td>
+	<td><div align='center'><button onclick='Check()'>SUBMIT</button></div></td>
+	</tr></table>
+	
+	<h2 align='center'><a href='file:///C:/Users/Leia/workspace/Rr/WebContent/Rr.html'><- BACK</a></h2>
+	
+	<p id='genONE' class='hide'></p>
+	<p id='genTWO' class='hide'></p>
+	
+</body>
+</html>
