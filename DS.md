@@ -80,7 +80,15 @@ If the genotypes are either combination of RR and rr:
 * If the number is [0,.5) then the plant will be green.
 * If the number is [.5,1) then the plant will be yellow.
 * The process is repeated 20 times to generate a total of 20 plants.
-
+Next to the 20 plants are three buttons, RR, Rr, and rr.  When one of these is clicked the genotype appears in bigger font above the buttons.  The user clicks two buttons, and both genotypes appear.
+The "CLEAR" button removes these bigger font genotypes.
+The "SUBMIT" button triggers the function Submit() which checks to see if the genotypes the user selected are valid possibilities of parents for the 20 plants:
+* If the plants are all green then the user could have selected RR & RR, RR & Rr, or RR & rr.
+* If the plants are all yellow then the user must have selected rr & rr.
+* If the green:yellow ratio is about 3:1 then the user must have selected Rr & Rr.
+* If the green:yellow ratio is about 1:1 then the user must have selected Rr & rr.
+If any of the above conditions are met, a "Correct!" alert appears and the Clear() and Repr() functions are run again.
+Otherwise, a "That's not it... try again!" alert appears and the user can reselect the genotypes and resubmit.
 
 
 ##Software Test Strategy
