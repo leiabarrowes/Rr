@@ -90,6 +90,12 @@ The "SUBMIT" button triggers the function Submit() which checks to see if the ge
 If any of the above conditions are met, a "Correct!" alert appears and the Clear() and Repr() functions are run again.
 Otherwise, a "That's not it... try again!" alert appears and the user can reselect the genotypes and resubmit.
 
+###Score Tracking
+A fraction that says 0/0 always appears at the bottom of the window when the game is initialized.  These zeros are changeable.  The fraction represents the number of correct and incorrect answers entered by the user.
+Whenever the user wins a game, both sides of the fraction are increased by 1.
+Whenever the user loses a game, just the right side of the fraction increases by 1.
+If the user quits the game, his or her score is not saved.  
+
 
 ##Software Test Strategy
 Play each game to make sure each runs smoothly without errors.
