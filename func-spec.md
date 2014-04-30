@@ -24,7 +24,7 @@ User is told which allele is dominant and which is recessive: Picture of a green
 
 Computer randomly generates "RR", "Rr", or "rr".
 Two plants in middle of screen (green and yellow).  User must click the one with the correct color according to the given genotype.
-Computer keeps track of number Correct and number Incorrect.
+Computer keeps track of number Correct and number Incorrect.  However, when the user quits the game the score is not saved.
 "Back" link sends user back to home page.
 
 
@@ -32,12 +32,12 @@ Computer keeps track of number Correct and number Incorrect.
 
 Computer randomly generates 2 phenotypes (out of RR, Rr, and rr), which are placed on the outside of a Punnett square.  
 Inside each cell are the choices RR, Rr, and rr.  User must click on the one that belongs in that cell.
-Computer keeps track of number Correct and number Incorrect.
+Computer keeps track of number Correct and number Incorrect.  However, when the user quits the game the score is not saved.
 "Back" link sends user back to home page.
 
 
 ##Who are the Parents?##
 
 User selects the genotypes of the parents after seeing the colors of the offspring.
-Computer keeps track of number Correct and number Incorrect.
+Computer keeps track of number Correct and number Incorrect.  However, when the user quits the game the score is not saved.
 "Back" link sends user back to home page.
