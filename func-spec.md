@@ -1,4 +1,4 @@
-#Genetics Game#
+#Functional Specification: Genetics Game#
 
 
 ##Introduction##
