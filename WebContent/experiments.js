@@ -2,6 +2,7 @@
  * 
  */
 function Test(){
-	document.getElementById('test').innerHTML='EUREKA!!!!'
+	var test=Number(document.getElementById('test').innerHTML)
+	document.getElementById('test').innerHTML=Number(test+1)
 }
 
