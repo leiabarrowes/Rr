@@ -1,23 +1,31 @@
 /**
  * 
  */
+function Percent(){
+	var correct=Number(document.getElementById('correct').innerHTML)
+	var total=Number(document.getElementById('total').innerHTML)
+	var percent=(correct*100/total).toFixed(1)
+	document.getElementById('percent').innerHTML=percent+'%'
+}
+
 function Submit(){
 	var correct=Number(document.getElementById('correct').innerHTML)
-	var total=Number(documentElementById('total').innerHTML)
-	var gen1=document.getElementById('gen1').innerHTML
-	var gen2=document.getElementById('gen2').innerHTML
-	var pONE=document.getElementById('pONE').innerHTML
-	var pTWO=document.getElementById('pTWO').innerHTML
-	if (((gen1==='RR'||gen2==='RR')&&(pONE==='RR'||pTWO==='RR'))||((gen1==='Rr'&& gen2==='Rr')&&(pONE==='Rr'&& pTWO==='Rr'))||(((gen1==='Rr' && gen2==='rr')||(gen1==='rr' && gen2==='Rr'))((pONE==='Rr' && pTWO==='rr')||(pONE==='rr' && pTWO==='Rr')))||((gen1==='rr' && gen2==='rr')&&(pONE==='rr'&& pTWO==='rr'))){
-		alert('Correct!')
+	var total=Number(document.getElementById('total').innerHTML)
+	var type=document.getElementById('type').innerHTML
+	var type2=document.getElementById('type2').innerHTML
+	if (type===type2){
 		document.getElementById('correct').innerHTML=Number(correct+1)
 		document.getElementById('total').innerHTML=Number(total+1)
-		Clear()
+		Percent()
+		alert('Correct!')
 		Repr()
+		Clear()
 	}
 	else{
-		alert("That's not it... try again!")
 		document.getElementById('total').innerHTML=Number(total+1)
+		Percent()
+		alert("That's not it... try again!")
+		Clear()
 	}
 }
 
@@ -29,20 +37,38 @@ function Clear(){
 function Parent(gen){
 	var pONE=document.getElementById('pONE').innerHTML
 	var pTWO=document.getElementById('pTWO').innerHTML
+	var both=0
 	if (pONE==='___'){
 		document.getElementById('pONE').innerHTML=gen
 	}
 	else if (pTWO==='___'){
 		document.getElementById('pTWO').innerHTML=gen
+		both=1
+	}
+	if (gen==='RR'){
+		document.getElementById('type2').innerHTML='allG'
+	}
+	if (both===1){
+		pONE=document.getElementById('pONE').innerHTML
+		pTWO=document.getElementById('pTWO').innerHTML
+		if (pONE==='Rr'&&pTWO==='Rr'){
+			document.getElementById('type2').innerHTML='hybs'
+		}
+		else if ((pONE==='Rr'&&pTWO==='rr')||(pONE==='rr'&&pTWO==='Rr')){
+			document.getElementById('type2').innerHTML='half'
+		}
+		else if (pONE==='rr'&&pTWO==='rr'){
+			document.getElementById('type2').innerHTML='allY'
+		}
 	}
 }
 
 function Repr(){
-	document.getElementById('init1').innerHTML="<h3 align=center>Two possible parent genotypes are:</h3><table align='center'><tr><td style='font-size:50px' id=pONE>___</td><td style='font-size:25px'>and</td><td style='font-size:50px' id=pTWO>___</td></tr><tr><td align=center><button onclick=Parent('RR')>RR</button></td><td align=center><button onclick=Parent('Rr')>Rr</button></td><td align=center><button onclick=Parent('rr')>rr</button></td></tr></table><p class='hide'>...</p><div align='center'><button onclick='Clear()'>CLEAR</button></div><div align='center'><button onclick='Submit()'>SUBMIT</button></div>"
+	document.getElementById('init1').innerHTML="<h3 align=center>Two possible parent genotypes are:</h3><table align='center'><tr><td style='font-size:50px' id=pONE>___</td><td style='font-size:25px'>and</td><td style='font-size:50px' id=pTWO>___</td></tr><tr><td align=center><button onclick=Parent('RR')>RR</button></td><td align=center><button onclick=Parent('Rr')>Rr</button></td><td align=center><button onclick=Parent('rr')>rr</button></td></tr></table><p class='hide'>...</p><div align='center'><button onclick='Clear()'>CLEAR</button></div><div align='center'><button onclick=Submit()>SUBMIT</button></div>"
 	document.getElementById('init').innerHTML=''
 	var gen1=Math.random()
 	var gen2=Math.random()
-	if (gen1>=0 && gen1 <(1/3))
+	if (gen1>=0 && gen1<(1/3))
 		document.getElementById("gen1").innerHTML='RR'
 	else if (gen1>=(1/3) && gen1<(2/3))
 		document.getElementById("gen1").innerHTML='Rr'
@@ -62,6 +88,8 @@ function Repr(){
 		var genTWO=document.getElementById("gen2").innerHTML
 		if (genONE==='RR'||genTWO==='RR'){
 			document.getElementById(i).innerHTML="<img height='10%' width='10%' src='file:///C:/Users/Leia/Downloads/GreenPod.jpg'/>"
+			document.getElementById('type').innerHTML='allG'
+			var type=document.getElementById('type').innerHTML
 		}
 		else if(genONE==='Rr'&& genTWO==='Rr'){
 			if (rand>=0 && rand<.75){
@@ -70,6 +98,8 @@ function Repr(){
 			else{
 				document.getElementById(i).innerHTML="<img height='10%' width='10%' src='file:///C:/Users/Leia/Downloads/YellowPod.jpg'/>"
 			}
+			document.getElementById('type').innerHTML='hybs'
+			var type=document.getElementById('type').innerHTML
 		}
 		else if((genONE==='Rr' && genTWO==='rr')||(genONE==='rr' && genTWO==='Rr')){
 			if(rand>=0 && rand<.5){
@@ -78,16 +108,24 @@ function Repr(){
 			else{
 				document.getElementById(i).innerHTML="<img height='10%' width='10%' src='file:///C:/Users/Leia/Downloads/YellowPod.jpg'/>"
 			}
+			document.getElementById('type').innerHTML='half'
+			var type=document.getElementById('type').innerHTML
 		}
 		else{
 			document.getElementById(i).innerHTML="<img height='10%' width='10%' src='file:///C:/Users/Leia/Downloads/YellowPod.jpg'/>"
+			document.getElementById('type').innerHTML='allY'
+			var type=document.getElementById('type').innerHTML
 		}
+	}
+	var type2=document.getElementById('type2').innerHTML
+	if (type===type2){
+		Repr()
 	}
 }
 
 function Check(){
 	var correct=Number(document.getElementById('correct').innerHTML)
-	var total=Number(document.getElementById('total').innterHTML)
+	var total=Number(document.getElementById('total').innerHTML)
 	var genONE=document.getElementById('genONE').innerHTML
 	var genTWO=document.getElementById('genTWO').innerHTML
 	var q1=document.getElementById('q1').innerHTML
@@ -100,6 +138,7 @@ function Check(){
 			if (q1==='RR' && q2==='RR' && q3==='RR' && q4==='RR'){
 				document.getElementById('correct').innerHTML=Number(correct+1)
 				document.getElementById('total').innerHTML=Number(total+1)
+				Percent()
 				alert('Correct!')
 				ResetDG()
 				DPrand1()
@@ -107,6 +146,7 @@ function Check(){
 			}
 			else{
 				document.getElementById('total').innerHTML=Number(total+1)
+				Percent()
 				alert("That's not it... Try again!")
 			}
 		}
@@ -114,6 +154,7 @@ function Check(){
 			if (q1==='RR' && q2==='RR' && q3==='Rr' && q4==='Rr'){
 				document.getElementById('correct').innerHTML=Number(correct+1)
 				document.getElementById('total').innerHTML=Number(total+1)
+				Percent()
 				alert('Correct!')
 				ResetDG()
 				DPrand1()
@@ -121,6 +162,7 @@ function Check(){
 			}
 			else{
 				document.getElementById('total').innerHTML=Number(total+1)
+				Percent()
 				alert("That's not it... Try again!")
 			}
 		}
@@ -128,6 +170,7 @@ function Check(){
 			if (q1==='Rr' && q2==='Rr' && q3==='Rr' && q4==='Rr'){
 				document.getElementById('correct').innerHTML=Number(correct+1)
 				document.getElementById('total').innerHTML=Number(total+1)
+				Percent()
 				alert('Correct!')
 				ResetDG()
 				DPrand1()
@@ -135,6 +178,7 @@ function Check(){
 			}
 			else{
 				document.getElementById('total').innerHTML=Number(total+1)
+				Percent()
 				alert("That's not it... Try again!")
 			}
 		}
@@ -144,6 +188,7 @@ function Check(){
 			if (q1==='Rr' && q2==='RR' && q3==='RR' && q4==='Rr'){
 				document.getElementById('correct').innerHTML=Number(correct+1)
 				document.getElementById('total').innerHTML=Number(total+1)
+				Percent()
 				alert('Correct!')
 				ResetDG()
 				DPrand1()
@@ -151,6 +196,7 @@ function Check(){
 			}
 			else{
 				document.getElementById('total').innerHTML=Number(total+1)
+				Percent()
 				alert("That's not it... Try again!")
 			}
 		}
@@ -158,6 +204,7 @@ function Check(){
 			if (q1==='Rr' && q2==='RR' && q3==='Rr' && q4==='rr'){
 				document.getElementById('correct').innerHTML=Number(correct+1)
 				document.getElementById('total').innerHTML=Number(total+1)
+				Percent()
 				alert('Correct!')
 				ResetDG()
 				DPrand1()
@@ -165,6 +212,7 @@ function Check(){
 			}
 			else{
 				document.getElementById('total').innerHTML=Number(total+1)
+				Percent()
 				alert("That's not it... Try again!")
 			}
 		}
@@ -172,6 +220,7 @@ function Check(){
 			if (q1==='rr' && q2==='Rr' && q3==='Rr' && q4==='rr'){
 				document.getElementById('correct').innerHTML=Number(correct+1)
 				document.getElementById('total').innerHTML=Number(total+1)
+				Percent()
 				alert('Correct!')
 				ResetDG()
 				DPrand1()
@@ -179,6 +228,7 @@ function Check(){
 			}
 			else{
 				document.getElementById('total').innerHTML=Number(total+1)
+				Percent()
 				alert("That's not it... Try again!")
 			}
 		} 
@@ -188,6 +238,7 @@ function Check(){
 			if (q1==='Rr' && q2==='Rr' && q3==='Rr' && q4==='Rr'){
 				document.getElementById('correct').innerHTML=Number(correct+1)
 				document.getElementById('total').innerHTML=Number(total+1)
+				Percent()
 				alert('Correct!')
 				ResetDG()
 				DPrand1()
@@ -195,6 +246,7 @@ function Check(){
 			}
 			else{
 				document.getElementById('total').innerHTML=Number(total+1)
+				Percent()
 				alert("That's not it... Try again!")
 			}
 		}
@@ -202,6 +254,7 @@ function Check(){
 			if (q1==='Rr' && q2==='Rr' && q3==='rr' && q4==='rr'){
 				document.getElementById('correct').innerHTML=Number(correct+1)
 				document.getElementById('total').innerHTML=Number(total+1)
+				Percent()
 				alert('Correct!')
 				ResetDG()
 				DPrand1()
@@ -209,6 +262,7 @@ function Check(){
 			}
 			else{
 				document.getElementById('total').innerHTML=Number(total+1)
+				Percent()
 				alert("That's not it... Try again!")
 			}
 		}
@@ -216,6 +270,7 @@ function Check(){
 			if (q1==='rr' && q2==='rr' && q3==='rr' && q4==='rr'){
 				document.getElementById('correct').innerHTML=Number(correct+1)
 				document.getElementById('total').innerHTML=Number(total+1)
+				Percent()
 				alert('Correct!')
 				ResetDG()
 				DPrand1()
@@ -223,6 +278,7 @@ function Check(){
 			}
 			else{
 				document.getElementById('total').innerHTML=Number(total+1)
+				Percent()
 				alert("That's not it... Try again!")
 			}
 		} 
@@ -294,42 +350,47 @@ function DPrand(){
 }
 
 function Start(){
-	document.getElementById('score').innerHTML="<p align=center>Score:</p><table align=center><tr><td id=correct>0</td><td>/</td><td id=total>0</td></tr></table><div align=center><button onclick=ReSco()>RESET SCORE</button></div>"
+	document.getElementById('score').innerHTML="<p align=center>Score:</p><table align=center><tr><td id=correct align=right>0</td><td align=center>/</td><td align=left id=total>0</td></tr><tr><td></td><td id='percent'>%</td><td></td></table><div align=center><button onclick=ReSco()>RESET SCORE</button></div>"
 }
 
 function Green(){
 	var geno=document.getElementById('result').innerHTML
 	var correct=Number(document.getElementById('correct').innerHTML)
-	var total=Number(document.getElementById('total').innterHTML)
+	var total=Number(document.getElementById('total').innerHTML)
 	if (geno==='RR'||geno==='Rr'){
 		document.getElementById('check').innerHTML='Correct!'
 		document.getElementById('correct').innerHTML=Number(correct+1)
 		document.getElementById('total').innerHTML=Number(total+1)
+		Percent()
 		DPrand()
 	}
 	else {
 		document.getElementById('check').innerHTML="That's not it... Try again!"
 		document.getElementById('total').innerHTML=Number(total+1)
+		Percent()
 	}
 }
 
 function Yellow(){
 	var geno=document.getElementById('result').innerHTML
 	var correct=Number(document.getElementById('correct').innerHTML)
-	var total=Number(document.getElementById('total').innterHTML)
+	var total=Number(document.getElementById('total').innerHTML)
 	if (geno==='rr'){
 		document.getElementById('check').innerHTML='Correct!'
 		document.getElementById('correct').innerHTML=Number(correct+1)
 		document.getElementById('total').innerHTML=Number(total+1)
+		Percent()
 		DPrand()
 	}
 	else {
 		document.getElementById('check').innerHTML="That's not it... Try again!"
 		document.getElementById('total').innerHTML=Number(total+1)
+		Percent()
 	}
 }
 
 function ReSco(){
 	document.getElementById('correct').innerHTML=Number(0)
 	document.getElementById('total').innerHTML=Number(0)
+	document.getElementById('percent').innerHTML='%'
 }
