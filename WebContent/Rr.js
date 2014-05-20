@@ -1,6 +1,10 @@
 /**
  * 
  */
+function LogIn(){
+	
+}
+
 function Percent(){
 	var correct=Number(document.getElementById('correct').innerHTML)
 	var total=Number(document.getElementById('total').innerHTML)
