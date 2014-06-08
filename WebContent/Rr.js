@@ -91,32 +91,32 @@ function Repr(){
 		var genONE=document.getElementById("gen1").innerHTML
 		var genTWO=document.getElementById("gen2").innerHTML
 		if (genONE==='RR'||genTWO==='RR'){
-			document.getElementById(i).innerHTML="<img height='10%' width='10%' src='file:///C:/Users/Leia/Downloads/GreenPod.jpg'/>"
+			document.getElementById(i).innerHTML="<img height='10%' width='10%' src='hhscp.org/u/leiab/GreenPod.jpg'/>"
 			document.getElementById('type').innerHTML='allG'
 			var type=document.getElementById('type').innerHTML
 		}
 		else if(genONE==='Rr'&& genTWO==='Rr'){
 			if (rand>=0 && rand<.75){
-				document.getElementById(i).innerHTML="<img height='10%' width='10%' src='file:///C:/Users/Leia/Downloads/GreenPod.jpg'/>"
+				document.getElementById(i).innerHTML="<img height='10%' width='10%' src='hhscp.org/u/leiab/GreenPod.jpg'/>"
 			}
 			else{
-				document.getElementById(i).innerHTML="<img height='10%' width='10%' src='file:///C:/Users/Leia/Downloads/YellowPod.jpg'/>"
+				document.getElementById(i).innerHTML="<img height='10%' width='10%' src='hhscp.org/u/leiab/YellowPod.jpg'/>"
 			}
 			document.getElementById('type').innerHTML='hybs'
 			var type=document.getElementById('type').innerHTML
 		}
 		else if((genONE==='Rr' && genTWO==='rr')||(genONE==='rr' && genTWO==='Rr')){
 			if(rand>=0 && rand<.5){
-				document.getElementById(i).innerHTML="<img height='10%' width='10%' src='file:///C:/Users/Leia/Downloads/GreenPod.jpg'/>"
+				document.getElementById(i).innerHTML="<img height='10%' width='10%' src='hhscp.org/u/leiab/GreenPod.jpg'/>"
 			}
 			else{
-				document.getElementById(i).innerHTML="<img height='10%' width='10%' src='file:///C:/Users/Leia/Downloads/YellowPod.jpg'/>"
+				document.getElementById(i).innerHTML="<img height='10%' width='10%' src='hhscp.org/u/leiab/YellowPod.jpg'/>"
 			}
 			document.getElementById('type').innerHTML='half'
 			var type=document.getElementById('type').innerHTML
 		}
 		else{
-			document.getElementById(i).innerHTML="<img height='10%' width='10%' src='file:///C:/Users/Leia/Downloads/YellowPod.jpg'/>"
+			document.getElementById(i).innerHTML="<img height='10%' width='10%' src='hhscp.org/u/leiab/YellowPod.jpg'/>"
 			document.getElementById('type').innerHTML='allY'
 			var type=document.getElementById('type').innerHTML
 		}
@@ -342,8 +342,8 @@ function ResetDG(){
 function DPrand(){
 	document.getElementById('instruc').innerHTML='What color should a plant with the above genotype be?'
 	document.getElementById('init').innerHTML=''
-	document.getElementById('greenbutton').innerHTML="<button onclick='Green()'><img width='50%' height='50%' src='file:///C:/Users/Leia/Downloads/GreenPod.jpg'/></button>"
-	document.getElementById('yellowbutton').innerHTML="<button onclick='Yellow()'><img width='50%' height='50%' src='file:///C:/Users/Leia/Downloads/YellowPod.jpg'/></button>"
+	document.getElementById('greenbutton').innerHTML="<button onclick='Green()'><img width='50%' height='50%' src='hhscp.org/u/leiab/GreenPod.jpg'/></button>"
+	document.getElementById('yellowbutton').innerHTML="<button onclick='Yellow()'><img width='50%' height='50%' src=hhscp.org/u/leiab/YellowPod.jpg'/></button>"
 	var gen=Math.random();
 	if (gen>=0 && gen <(1/3))
 		document.getElementById("result").innerHTML='RR'
