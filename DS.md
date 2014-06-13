@@ -37,7 +37,13 @@ HMTL and CSS will be used to create the layout of each game.
 Pressing a specific HTML button on the web page will trigger a specific JavaScript function in response, which will make the game progress.  See Mathematical Model for details on the functions and gameplay.
 
 ##Major Entry Points
+Home -- hhscp.org/u/leiab/Rr.html
+What Color? -- hhscp.org/u/leiab/DetPh.html
+Punnett Squares -- hhscp.org/u/leiab/PreG.html
+Who are the Parents? -- hhscp.org/u/leiab/DetG.html
+About -- hhscp.org/u/leiab/About.html
 
+more entry points to come with addition of accounts and score-tracking
 
 ##Mathematical Model 
 ###What Color?
